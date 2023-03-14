@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <table>
+            <tbody>
+                  <tr>
+                <th><label for="Amount"></label> Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="Amount"></td>
+                <td>
+                    <select id="From">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="To">
+                        <option value="VND">VND</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td><button onclick="ChangeMoney()">Convert</button></td>
+            </tr>
+            </tbody>
+        </table><br>
+        <p style="color: blue;">Result: <span id="show"></span></p>
+        <script>
+            function ChangeMoney(){
+                let a = document.getElementById('Amount').value;
+                let b = document.getElementById('From').value;
+                let c = document.getElementById('To').value;
+                if(b=='USD'){
+                    if(c=='VND'){
+                        let d = a * 23000
+                        document.getElementById('show').innerText = d;
+                    }else{
+                        document.getElementById('show').innerText = d;
+                    }
+                }else if(b=='VND'){
+                    if(c=='USD'){
+                        let d = a / 23000
+                        document.getElementById('show').innerText = d;
+                    }else{
+                        document.getElementById('show').innerText = d;
+                    }
+                }
+            }
+        </script>
+</body>
+</html>
