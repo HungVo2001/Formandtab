@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img class="Car" src="1234/Untitled.png" alt="">
+    <button id="switch" onclick="ControlCar()">Right</button>
+    <button id="switch1" onclick="ControlCar2()">Up</button>
+    <script>
+        function ControlCar(){
+            if(document.getElementById('switch').innerText=='Right'){
+                document.getElementsByClassName('Car')[0].src='1234/Untitled.png'
+                document.getElementById('switch').innerText='Left'
+            }
+            else{
+                document.getElementsByClassName('Car')[0].src='1234/Untitled2.png'
+                document.getElementById('switch').innerText='Right'
+            }
+        }
+        function ControlCar2(){
+            if(document.getElementById('switch1').innerText=='Up'){
+                document.getElementsByClassName('Car')[0].src='1234/Untitled1.png'
+                document.getElementById('switch1').innerText='Down'
+            }
+            else{
+                document.getElementsByClassName('Car')[0].src='1234/Untitled3.png'
+                document.getElementById('switch1').innerText='Up'
+            }
+        }
+    </script>
+</body>
+</html>
