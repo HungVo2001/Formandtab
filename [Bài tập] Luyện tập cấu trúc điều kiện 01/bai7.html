@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Cước phí Phone</p>
+    <input type="number" name="" id="n1"><br><br>
+    <div>
+        <button onclick="Call()">Result:</button>
+        <span id="Result"></span>
+    </div>
+    <script>
+        function Call() {
+            let n1 = Number(document.getElementById("n1").value);
+            switch (n1 > 10000) {
+                case true:
+                    document.getElementById("Result").innerText = "600.000/month"
+                    break;
+                case false:
+                    switch (n1 > 1000) {
+                        case true:
+                            document.getElementById("Result").innerText = "300.000/month"
+                            break;
+                        case false:
+                            switch (n1 > 500) {
+                                case true:
+                                    document.getElementById("Result").innerText = "150.000/month"
+                                    break;
+                            }   case false:
+                            document.getElementById("Result").innerText = "100.000/month"
+                            break;
+                    }
+            }
+        }
+    </script>
+</body>
+
+</html>
