@@ -9,22 +9,23 @@
 </head>
 
 <body>
-    <table border="1" id="Demo" width="700" cellspacing="0" cellpadding="5">
+    <table border="1" id="bcc">
 
     </table>
     <script>
         let str = "";
-        for (i = 1; i <= 10; i++) {
+        for(i = 1; i <= 9; i++){
             str += "<tr>"
-            for (j = 1; j <= 10; j++) {
-                str += "<td>";
-                    str += `${i*j}`;
-                    str += "</td>"
+            for(j = 2; j <= 9; j++){
+                str += "<td>"
+                str += `${i}x${j} = ${i * j}`;
+                str += "</td>"
             }
             str += "</tr>"
         }
-        document.getElementById("Demo").innerHTML = str;
+        document.getElementById("bcc").innerHTML = str;
     </script>
+</body>
 </body>
 
 </html>
