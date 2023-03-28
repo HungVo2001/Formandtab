@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Caro Game</h3>
+    <p id="Carogame"></p>
+    <input type="button" value="change value" onclick="changevalue()">
+    <script>
+        let broad = [];
+        let data = '';
+        let b = document.getElementById("Carogame")
+        let h = 1;
+        for(let i = 0; i < 5; i++){
+            broad[i] = new Array ('(.)','(.)','(.)','(.)','(.)');
+        }
+        for( let i = 0; i < 5; i++){
+            data += "<br/>"
+            for(let j = 0; j < 5; j++){
+                data += broad[i][j] + "&nbsp;"
+            }
+        }
+        // data +="<br/<br/<input type='button' value='change value' onclick='changevalue'()>"
+        b.innerHTML = data;
+        function changevalue(){
+             data = '';
+            let positionX = +prompt(" position of x")
+            let positionY = +prompt(" position of y")
+        
+            if(h % 2 ==0){
+                broad[positionX][positionY] = 'x';
+            } else{
+                broad[positionX][positionY] = 'o';
+            }
+            h++;
+            for(let i = 0; i < 5; i++){
+                data += "<br/>"
+                // broad[positivex][positivey] = "x"
+                for(let j = 0; j < 5; j ++){
+                    data += broad[i][j] + '&nbsp;' + '&nbsp;' + '&nbsp;'
+                }
+            }
+            // data += "<br/<br/<input type='button 'value='change value' onclick='changevalue'()>"
+             b.innerHTML = "<hr/>" + data;
+
+             for(let i = 0; i < 5; i++){
+                for(let j = 0; j < 5; j++){
+                    if(broad[i][j] === 'x' && broad[i][j+1] === 'x' && broad[i][j+2] === 'x' || broad[i][j] === 'x' && broad[i+1][j] ==='x' && broad[i+2][j] === 'x'){
+                        alert("x win")
+                    }else if(broad[i][j] === 'o' && broad[i][j+1] === 'o' && broad[i][j+2] === 'o' || broad[i][j] === 'o' && broad[i+1][j] ==='o' && broad[i+2][j] === 'o'){
+                        alert("o Win")
+                    }
+                }
+             }
+        }
+       
+    </script>
+</body>
+</html>
