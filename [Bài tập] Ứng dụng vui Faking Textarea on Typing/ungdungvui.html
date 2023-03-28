@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type anthing slowly ứng dụng vui</title>
+</head>
+
+<body>
+    <center>
+        <h2>Type anthing slowly</h2>
+        <form name="h">
+            <textarea name="txt" id="" cols="40" rows="10" onkeydown="textarea();"></textarea>
+        </form>
+    </center>
+    <script>
+        let a = new Array(),
+            n = "";
+        a[1] = 'T'; a[2] = 'Ô'; a[3] = 'I'; a[4] = ' '; a[5] = 'R'; a[6] = 'Ấ'; a[7] = 'T'; a[8] = ' '; a[9] = 'T'; a[10] = 'H'; a[11] = 'Í'; a[12] = 'C'; a[13] = 'H'; a[14] = ' '; a[15] = 'M'; a[16] = 'O'; a[17] = 'N'
+            ; a[18] = 'N'; a[19] = 'E'; a[20] = 'Y'; a[21] = '!'; a[22] = '!'; a[23] = "!";
+        function textarea() {
+            t = document.h.txt.value;
+            j = t.length;
+            if (j > 0) {
+                for (let i = 1; i <= j; i++) {
+                    n += a[i];
+                    if (j == 23) {
+                        document.h.txt.value = ""
+                        n = ""
+                    }
+                }
+            }
+            document.h.txt.value = n;
+            n = ""
+            setTimeout(textarea(), 1)
+        }
+
+    </script>
+</body>
+
+</html>
